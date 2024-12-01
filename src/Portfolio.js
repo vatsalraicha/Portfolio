@@ -146,7 +146,7 @@ const Portfolio = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header/Navigation */}
-      <nav className="bg-white shadow-sm">
+      <nav className="fixed top-0 w-full bg-white shadow-sm z-50">
         <div className="max-w-8xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold text-gray-800">Vatsal Raicha</h1>
