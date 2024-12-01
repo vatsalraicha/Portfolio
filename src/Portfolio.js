@@ -173,9 +173,9 @@ const Portfolio = () => {
               <a href="https://linkedin.com/in/vatsalraicha" className="text-gray-600 hover:text-gray-900">
                 <Linkedin size={24} />
               </a>
-              <a href="mailto:your.email@example.com" className="text-gray-600 hover:text-gray-900">
+              {/* <a href="mailto:your.email@example.com" className="text-gray-600 hover:text-gray-900">
                 <Mail size={24} />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
