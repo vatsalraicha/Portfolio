@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+import emailjs from '@emailjs/browser';
 import { Github, Linkedin, Mail, ExternalLink, Database, LineChart, Brain, Code, Workflow, Sparkles, Target, Globe2, X } from 'lucide-react';
-
+emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 // Helper Components
 const SkillCard = ({ icon, title, description }) => {
   return (
@@ -314,8 +315,85 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
+      <section id="contact" className="bg-gray-50 py-20">
+        <div className="max-w-8xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Get in Touch</h2>
+          <div className="max-w-lg mx-auto">
+            <p className="text-gray-600 mb-8 text-center">
+              I'm always interested in new opportunities and collaborations.
+              Feel free to reach out!
+            </p>
+            <form 
+              className="space-y-6"
+              onSubmit={(e) => {
+                e.preventDefault();
+                const templateParams = {
+                  from_name: e.target.name.value,
+                  from_email: e.target.email.value,
+                  message: e.target.message.value
+                };
+                
+                emailjs.send(
+                  'service_ckz6p9c',
+                  'template_tku2qfe',
+                  templateParams
+                )
+                .then((response) => {
+                  alert('Message sent successfully!');
+                  e.target.reset();
+                })
+                .catch((error) => {
+                  console.error('Failed to send message:', error);
+                  alert('Failed to send message. Please try again.');
+                });
+              }}
+            >
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 px-4 py-2"
+                  placeholder="Your name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 px-4 py-2"
+                  placeholder="Your email"
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  required
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 px-4 py-2"
+                  placeholder="Your message"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full flex justify-center items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              >
+                <Mail className="mr-2" size={20} />
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      {/* Contact Section
       <section id="contact" className="bg-gray-50 py-20">
         <div className="max-w-8xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Get in Touch</h2>
@@ -333,7 +411,7 @@ const Portfolio = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="bg-white py-8">
