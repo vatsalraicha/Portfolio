@@ -254,7 +254,7 @@ const Portfolio = () => {
             <ProjectCard 
               title="Healthcare Member Rewards Program Prediction"
               description="Developing a predictive model to identify potential rewards program members using healthcare data and smart device metrics. The project involves analyzing timeseries data and implementing clustering to categorize customer engagement levels for targeted outreach."
-              tags={['Time Series Analysis', 'Clustering', 'Smart Device Data', 'Healthcare Analytics']}
+              tags={['Time Series Analysis', 'Azure ML', 'Databricks', 'Spark', 'SparkML', 'MLFlow', 'Snowflake', 'Clustering', 'Smart Device Data', 'Healthcare Analytics']}
               date="September 2024 - Present"
               image="Rewards.png"
               imageAlt="Above Image is indicative only but similar to the project"
@@ -262,7 +262,7 @@ const Portfolio = () => {
             <ProjectCard 
               title="GenAI-Powered Analytics Platform"
               description="Developed an innovative GenAI application using PandasAI and OpenAI to replace traditional PowerBI functionality. The system processes natural language prompts to generate visualizations and insights, with responses stored in a Vector DB (Milvus) for efficient retrieval and reduced API calls."
-              tags={['PandasAI', 'OpenAI', 'RAG', 'Vector DB', 'Milvus', 'GenAI']}
+              tags={['PandasAI', 'OpenAI', 'RAG', 'LangChain', 'Vector DB', 'Milvus', 'GenAI']}
               date="July 2024 - October 2024"
               image="Publishing.png"
               imageAlt="Above Image is indicative only but similar to the project"
