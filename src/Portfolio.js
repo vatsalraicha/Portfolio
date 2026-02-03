@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import emailjs from '@emailjs/browser';
+// I verified 'ExternalLink' is included in this list:
 import { Github, Linkedin, Mail, ExternalLink, Database, LineChart, Brain, Code, Workflow, Sparkles, Target, Globe2, X } from 'lucide-react';
+
 emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+
 // Helper Components
 const SkillCard = ({ icon, title, description }) => {
   return (
@@ -111,37 +114,6 @@ const ProjectCard = ({ title, description, tags, date, image, imageAlt }) => {
   );
 };
 
-// const ProjectCard = ({ title, description, tags, date, image }) => {
-//   return (
-//     <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-//       {image && (
-//         <div className="mb-6">
-//           <img 
-//             src={`/images/${image}`}
-//             alt={title}
-//             className="w-full rounded-lg shadow-sm object-cover h-64"
-//           />
-//         </div>
-//       )}
-//       <div className="flex justify-between items-start mb-3">
-//         <h3 className="text-xl font-semibold">{title}</h3>
-//         <span className="text-sm text-gray-500">{date}</span>
-//       </div>
-//       <p className="text-gray-600 mb-4">{description}</p>
-//       <div className="flex flex-wrap gap-2">
-//         {tags.map((tag, index) => (
-//           <span 
-//             key={index}
-//             className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
-//           >
-//             {tag}
-//           </span>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
 const Portfolio = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -173,9 +145,6 @@ const Portfolio = () => {
               <a href="https://linkedin.com/in/vatsalraicha" className="text-gray-600 hover:text-gray-900">
                 <Linkedin size={24} />
               </a>
-              {/* <a href="mailto:your.email@example.com" className="text-gray-600 hover:text-gray-900">
-                <Mail size={24} />
-              </a> */}
             </div>
           </div>
         </div>
@@ -186,7 +155,6 @@ const Portfolio = () => {
         <div className="max-w-8xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Core Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8">
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> */}
             <SkillCard 
               icon={<Database size={24} />}
               title="Data Analysis"
@@ -200,7 +168,7 @@ const Portfolio = () => {
             <SkillCard 
               icon={<Brain size={24} />}
               title="Machine Learning"
-              description="Implementing ML models for classification, regression, and clustering using scikit-learn, PyTorch &TensorFlow"
+              description="Implementing ML models for classification, regression, and clustering using scikit-learn, PyTorch & TensorFlow"
             />
             <SkillCard 
               icon={<Sparkles size={24} />}
@@ -249,7 +217,6 @@ const Portfolio = () => {
       <section id="projects" className="bg-white py-20">
         <div className="max-w-8xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
-          {/* <div className="grid grid-cols-1 gap-8"> */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ProjectCard 
               title="Healthcare Member Rewards Program Prediction"
@@ -286,6 +253,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
       <section className="bg-gray-50 py-20">
         <div className="max-w-8xl mx-auto px-4">
           <div className="mt-12 bg-white p-8 rounded-lg shadow-sm">
@@ -315,6 +283,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
       {/* Vatsal Labs Section */}
       <section className="bg-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -338,6 +307,7 @@ const Portfolio = () => {
           </a>
         </div>
       </section>
+
       {/* Contact Section */}
       <section id="contact" className="bg-gray-50 py-20">
         <div className="max-w-8xl mx-auto px-4">
@@ -416,25 +386,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-      {/* Contact Section
-      <section id="contact" className="bg-gray-50 py-20">
-        <div className="max-w-8xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Get in Touch</h2>
-          <div className="text-center">
-            <p className="text-gray-600 mb-6">
-              I'm always interested in new opportunities and collaborations.
-              Feel free to reach out!
-            </p>
-            <a 
-              href="mailto:your.email@example.com"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-            >
-              <Mail className="mr-2" size={20} />
-              Contact Me
-            </a>
-          </div>
-        </div>
-      </section> */}
 
       {/* Footer */}
       <footer className="bg-white py-8">
