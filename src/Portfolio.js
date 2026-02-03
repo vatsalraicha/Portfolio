@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import emailjs from '@emailjs/browser';
-// I verified 'ExternalLink' is included in this list:
 import { Github, Linkedin, Mail, ExternalLink, Database, LineChart, Brain, Code, Workflow, Sparkles, Target, Globe2, X } from 'lucide-react';
 
 emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
@@ -126,6 +125,7 @@ const Portfolio = () => {
               <a href="#about" className="text-gray-600 hover:text-gray-900">About</a>
               <a href="#skills" className="text-gray-600 hover:text-gray-900">Skills</a>
               <a href="#projects" className="text-gray-600 hover:text-gray-900">Projects</a>
+              <a href="#vatsal-labs" className="text-gray-600 hover:text-gray-900">Vatsal Labs</a>
               <a href="#contact" className="text-gray-600 hover:text-gray-900">Contact</a>
             </div>
           </div>
@@ -285,7 +285,7 @@ const Portfolio = () => {
       </section>
 
       {/* Vatsal Labs Section */}
-      <section className="bg-white py-20">
+      <section id="vatsal-labs" className="bg-white py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="inline-block p-3 rounded-full bg-blue-100 text-blue-600 mb-6">
             <Code size={32} />
