@@ -1,4 +1,12 @@
 # Netlify configuration for SPA
+
+# Redirect non-www to www (canonical domain)
+[[redirects]]
+  from = "https://vatsalraicha.com/*"
+  to = "https://www.vatsalraicha.com/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
