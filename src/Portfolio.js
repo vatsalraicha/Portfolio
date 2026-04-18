@@ -139,7 +139,14 @@ const Portfolio = () => {
       <nav className="fixed top-0 w-full bg-white dark:bg-gray-900 shadow-sm z-50 border-b border-transparent dark:border-gray-800">
         <div className="max-w-8xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Vatsal Raicha</h1>
+            <a href="#" className="flex items-center gap-3">
+              <img
+                src="/logo192.png"
+                alt="Vatsal Raicha logo"
+                className="w-9 h-9 rounded-full"
+              />
+              <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Vatsal Raicha</h1>
+            </a>
             <div className="flex items-center space-x-6">
               <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">About</a>
               <a href="#skills" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Skills</a>
