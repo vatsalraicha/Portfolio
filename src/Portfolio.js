@@ -136,8 +136,9 @@ const Portfolio = () => {
       <section className="bg-white">
         <div className="max-w-8xl mx-auto px-4 py-20">
           <div className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">Data Scientist & ML Engineer</h1>
-            <p className="text-xl text-gray-600 mb-8">Transforming data into actionable insights and building intelligent solutions</p>
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Data Scientist & AI/ML Engineer</h1>
+            <p className="text-xl text-gray-600 mb-2">Vibe Coder · Hobbyist Developer · Open Source · Loves Technology</p>
+            <p className="text-md text-gray-500 mb-8">Production ML by day. Shipping side projects and contributing to open source by night.</p>
             <div className="flex justify-center space-x-4">
               <a href="https://github.com/vatsalraicha" className="text-gray-600 hover:text-gray-900">
                 <Github size={24} />
@@ -292,9 +293,10 @@ const Portfolio = () => {
           </div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Beyond Data Science</h2>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            While my professional focus is Data Science, I dedicate my downtime to building useful extensions for Chrome and Firefox. 
-            <span className="font-semibold text-gray-900"> Vatsal Labs</span> is the home for these experiments. 
-            I believe in keeping tools accessible, so everything I build there is 100% free—and committed to staying that way.
+            While my professional focus is Data Science, my downtime goes into shipping software I actually want to use — native macOS apps like
+            <span className="font-semibold text-gray-900"> ArcTerm</span> (a modern terminal with built-in AI) and
+            <span className="font-semibold text-gray-900"> SnapIt</span> (a menu-bar screenshot tool with scrolling capture, OCR, and 13 annotation tools), alongside browser extensions for Chrome, Firefox, and Edge.
+            <span className="font-semibold text-gray-900"> Vatsal Labs</span> is the home for all of it. I believe in keeping tools accessible, so everything I build there is 100% free — and committed to staying that way.
           </p>
           <a 
             href="https://www.vatsallabs.com" 
