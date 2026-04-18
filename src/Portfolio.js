@@ -1,25 +1,14 @@
 import React, {useState} from 'react';
 import emailjs from '@emailjs/browser';
-import { Github, Linkedin, Mail, ExternalLink, Database, LineChart, Brain, Code, Workflow, Sparkles, Target, Globe2, X } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Database, Brain, Code, Sparkles, X } from 'lucide-react';
 
 emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
-// Helper Components
 const SkillCard = ({ icon, title, description }) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-sm">
       <div className="text-blue-600 mb-4">{icon}</div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-};
-
-const ValueCard = ({ icon, title, description }) => {
-  return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-      <div className="text-blue-600 mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
       <p className="text-gray-600">{description}</p>
     </div>
   );
@@ -38,7 +27,6 @@ const TestimonialCard = ({ company, feedback, achievement }) => {
   );
 };
 
-// Helper Components
 const ImageModal = ({ isOpen, image, alt, onClose }) => {
   if (!isOpen) return null;
   
@@ -152,70 +140,36 @@ const Portfolio = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="bg-gray-50 py-20">
+      <section id="skills" className="bg-gray-50 py-20 scroll-mt-20">
         <div className="max-w-8xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Core Skills</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            <SkillCard 
-              icon={<Database size={24} />}
-              title="Data Analysis"
-              description="Expert in Python, SQL, and statistical analysis for deriving meaningful insights from complex datasets"
-            />
-            <SkillCard 
-              icon={<LineChart size={24} />}
-              title="Data Visualization"
-              description="Creating compelling visualizations using matplotlib, seaborn, and interactive dashboards"
-            />
-            <SkillCard 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <SkillCard
               icon={<Brain size={24} />}
-              title="Machine Learning"
-              description="Implementing ML models for classification, regression, and clustering using scikit-learn, PyTorch & TensorFlow"
+              title="Machine Learning & Data Science"
+              description="Python, SQL, PySpark, scikit-learn, XGBoost, PyTorch, TensorFlow, Pandas — classification, regression, clustering, and time-series for production use cases."
             />
-            <SkillCard 
+            <SkillCard
               icon={<Sparkles size={24} />}
-              title="Generative AI"
-              description="Experienced in building custom GenAI solutions using LLMs, diffusion models, and vector databases for enterprise applications"
+              title="GenAI & NLP"
+              description="LangChain, LangGraph, RAG pipelines, Azure OpenAI, FAISS, Milvus, HuggingFace, BioClinicalBERT — enterprise GenAI from prototype to deployment."
             />
-            <SkillCard 
-              icon={<Globe2 size={24} />}
-              title="Domain Adaptability"
-              description="Strong focus on understanding business domains deeply - from Enterprise systems to Publishing to modern Healthcare analytics, enabling the development of innovative and contextual solutions across industries"
+            <SkillCard
+              icon={<Database size={24} />}
+              title="Cloud & Data Platforms"
+              description="Azure ML, Databricks, Snowflake, AWS (EC2, S3, SageMaker), PostgreSQL, MongoDB — scalable data pipelines and feature engineering at production scale."
             />
-            <SkillCard 
+            <SkillCard
               icon={<Code size={24} />}
-              title="Development"
-              description="Building data pipelines and ML systems with Python, SQL, and cloud technologies like AWS, Azure"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Me Section */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-8xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Me</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ValueCard
-              icon={<Workflow size={24} />}
-              title="End-to-End Expertise"
-              description="From data analysis to production deployment, I handle the complete lifecycle of ML projects. My experience spans from clinical trials to healthcare analytics, ensuring comprehensive solution delivery."
-            />
-            <ValueCard
-              icon={<Sparkles size={24} />}
-              title="Innovation & Adaptability"
-              description="Consistently working with cutting-edge technologies like Diffusion Models and GenAI. Quick to adapt and implement new technologies that add value to your projects."
-            />
-            <ValueCard
-              icon={<Target size={24} />}
-              title="Business Impact Focus"
-              description="Strong track record of delivering solutions that directly impact business outcomes - from optimizing clinical trials to revolutionizing analytics platforms and enhancing customer engagement."
+              title="MLOps & Engineering"
+              description="MLflow, Airflow, Docker, Kubernetes, FastAPI, Terraform, GitHub Actions — model versioning, monitoring, and CI/CD for ML systems."
             />
           </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="bg-white py-20">
+      <section id="projects" className="bg-white py-20 scroll-mt-20">
         <div className="max-w-8xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -275,18 +229,13 @@ const Portfolio = () => {
                 feedback="Delivered high-quality synthetic data generation solution for clinical trials, enabling faster and more cost-effective research processes."
                 achievement="Accelerated clinical trial data generation while maintaining statistical validity"
               />
-              <TestimonialCard
-                company="Cross-Industry Impact"
-                feedback="Consistent track record of delivering complex projects on time and exceeding client expectations across various industries."
-                achievement="100% client satisfaction rate"
-              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Vatsal Labs Section */}
-      <section id="vatsal-labs" className="bg-white py-20">
+      <section id="vatsal-labs" className="bg-white py-20 scroll-mt-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="inline-block p-3 rounded-full bg-blue-100 text-blue-600 mb-6">
             <Code size={32} />
@@ -311,7 +260,7 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-gray-50 py-20">
+      <section id="contact" className="bg-gray-50 py-20 scroll-mt-20">
         <div className="max-w-8xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Get in Touch</h2>
           <div className="max-w-lg mx-auto">
