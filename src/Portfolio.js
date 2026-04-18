@@ -338,12 +338,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-white py-8">
-        <div className="max-w-8xl mx-auto px-4 text-center text-gray-600">
-          <p>© 2024 Vatsal Raicha. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 };
